@@ -1,18 +1,13 @@
 class Solution {
 public:
-    int maxConsecutiveAnswers(string answerKey, int k) {
-         int res = 0, maxf = 0;
-        unordered_map<int, int> count;
-        
-        for (int i = 0; i < answerKey.length(); ++i)
-        {
-            maxf = max(maxf, ++count[answerKey[i]]);
-            if (res - maxf < k)
-                res++;
-            else
-                count[answerKey[i - res]]--;
+    int maxConsecutiveAnswers(string s, int k) {
+ int maxf = 0, i = 0, n = s.length();
+        vector<int> count(26);
+        for (int j = 0; j < n; ++j) {
+            maxf = max(maxf, ++count[s[j] - 'A']);
+            if (j - i + 1 > maxf + k)
+                --count[s[i++] - 'A'];
         }
-        
-        return res;
+        return n - i;
     }
 };
