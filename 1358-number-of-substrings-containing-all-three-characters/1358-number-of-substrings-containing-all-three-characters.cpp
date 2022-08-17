@@ -13,7 +13,7 @@ public:
            while (count[0] && count[1] && count[2] && i<=j){
                
                 --count[s[i] - 'a'];
-               ans+=(s.length()-j);  // agar abc agaye hai toh baad mein jitney bhi letter hai sab answer hoga jaise phele abc aagaye hai 
+               ans+=(s.length()-j);  // agar abc agaye hai toh baad mein jitney bhi letter hai sab answer hoga jaise phele abc aagaye hai toh baad mein sab answer hoga for example abc,abca,abcab,abcabc------> 
                i++;
             }
             
