@@ -1,13 +1,20 @@
 class Solution {
 public:
-    int maxConsecutiveAnswers(string s, int k) {
- int maxf = 0, i = 0, n = s.length();
-        vector<int> count(26);
-        for (int j = 0; j < n; ++j) {
-            maxf = max(maxf, ++count[s[j] - 'A']);
-            if (j - i + 1 > maxf + k)
-                --count[s[i++] - 'A'];
+ int solve(string &s,char b,int &k){
+       int left=0,res=0,size=s.size(),cnt=0;
+      for(int i=0;i<size;i++){
+            if(s[i]==b)
+                cnt++;
+            while(cnt>k){
+                if(s[left]==b)
+                    cnt--;
+                left++;
+            }
+            res=max(i-left+1,res);
         }
-        return n - i;
+        return res;
+    }
+    int maxConsecutiveAnswers(string s, int k) {
+      return max(solve(s,'F',k),solve(s,'T',k));  
     }
 };
