@@ -15,7 +15,7 @@ public:
                 ++freq[arr[i]];
                 if(freq[arr[i]] == 1)
                     --K;
-                ++i;
+                // ++i;
             }
             // make the window valid
             while(K < 0)
@@ -32,8 +32,10 @@ public:
             // 2: [2], [1,2]
             // 3: [1,2], [2,1], [1,2,1]
             substrings += i - j + 1;
+            ++i;
         }
         return substrings;
+         
     }
     
     
