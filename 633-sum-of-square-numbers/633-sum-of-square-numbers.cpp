@@ -1,9 +1,11 @@
 class Solution {
 public:
     bool judgeSquareSum(int c) {
-         if(c < 3)
-            return true ;
+//          if(c < 3)
+//             return true ;
+        
         long long int a = 0 , b = sqrt(c) ;
+        
         while(a <= b)
         {
             if(a*a + b*b == c)
