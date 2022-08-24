@@ -6,7 +6,7 @@ public:
         int i = 0, j = 0, substrings = 0;
         unordered_map<int, int> freq;
          
-        const int N = arr.size();
+         int N = arr.size();
         
         while(i < N)
         {
@@ -21,8 +21,9 @@ public:
             while(K < 0)
             {
                 --freq[arr[j]];
-                if(freq[arr[j]] == 0)
+                if(freq[arr[j]] == 0){
                     ++K;
+                }
                 ++j;
             }
             // Each valid window adds the subarrays which satisfies the condition
