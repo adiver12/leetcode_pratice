@@ -2,6 +2,8 @@ class Solution {
 public:
     int minEatingSpeed(vector<int>& piles, int H) {
           int l = 1, r = 1000000000;
+//      video by neet code 
+        
         
         while (l < r)
         {
