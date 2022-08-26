@@ -12,8 +12,7 @@ public:
                 v.push_back(i);
                 return v;
             }
-            else
-                m[nums[i]]=i;
+            m[nums[i]]=i;
         }
        return v;
         
