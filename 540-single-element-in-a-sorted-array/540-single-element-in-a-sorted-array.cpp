@@ -9,7 +9,10 @@ public:
             int mid = low + (high-low)/2;
             
 			// If we are on left side, move right
-            if(nums[mid] == nums[mid^1]) low = mid+1;
+            
+            if(nums[mid] == nums[mid^1]) 
+                low = mid+1;
+            
 			// if we are on right side, move left
             else high = mid-1;
         }
