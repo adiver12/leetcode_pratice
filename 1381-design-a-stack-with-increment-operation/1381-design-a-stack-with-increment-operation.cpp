@@ -8,6 +8,9 @@ public:
     }
     
     void push(int x) {
+        if(v.size()==max){
+            return;
+        }
         if(v.size()<max){
             v.push_back(x);
         }
