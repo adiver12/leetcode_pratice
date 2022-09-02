@@ -11,23 +11,23 @@
  */
 class Solution {
 public:
+     
     int sum=0;
-    int traverse(TreeNode* root,bool val) {
+    
+    void traverse(TreeNode* root,bool val){
         if(root==NULL){
-            return 0;
+            return ;
         }
         traverse(root->left,true);
-        traverse(root->right,false);        
+        traverse(root->right,false);
         
-        if(root->left==NULL && root->right==NULL && val==true ){
+        if(root->left == NULL && root->right == NULL && val==true){
             sum+=root->val;
         }
-        
-        return sum;
     }
     
      int sumOfLeftLeaves(TreeNode* root){
-         
+       
          bool flag=false;
          traverse(root,flag);
          return sum;
