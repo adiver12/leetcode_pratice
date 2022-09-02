@@ -14,16 +14,16 @@ public:
  
     int findBottomLeftValue(TreeNode* root) 
     {
-       queue<TreeNode*> q;
+        queue<TreeNode*> q;
         q.push(root);
         
         while(!q.empty()) {
             root=q.front(); // get the value before pop coz pop will not return anyy val
             q.pop();
-            if (root->right) {
+            if (root->right != NULL) {
                 q.push(root->right);
             }
-            if(root->left) q.push(root->left);
+            if(root->left != NULL) q.push(root->left);
         }
         return root->val;
     }
