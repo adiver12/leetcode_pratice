@@ -11,28 +11,20 @@
  */
 class Solution {
 public:
- void findBottomLeftValue(TreeNode* root, int& maxDepth, int& leftVal, int depth) 
- {
-        if (root == NULL) {
-            return;
-        }
-        //Go to the left and right of each node 
-        findBottomLeftValue(root->left, maxDepth, leftVal, depth+1);
-        findBottomLeftValue(root->right, maxDepth, leftVal, depth+1);
+ 
+    int findBottomLeftValue(TreeNode* root) 
+    {
+       queue<TreeNode*> q;
+        q.push(root);
         
-        //Update leftVal and maxDepth
-        if (depth > maxDepth) {
-            maxDepth = depth;
-            leftVal = root->val;
+        while(!q.empty()) {
+            root=q.front(); // get the value before pop coz pop will not return anyy val
+            q.pop();
+            if (root->right) {
+                q.push(root->right);
+            }
+            if(root->left) q.push(root->left);
         }
-    }
-    
-    //Entry function
-    int findBottomLeftValue(TreeNode* root) {
-        int maxDepth = 0;
-        //Initialize leftVal with root's value to cover the edge case with single node
-        int leftVal = root->val;
-        findBottomLeftValue(root, maxDepth, leftVal, 0);
-        return leftVal;
+        return root->val;
     }
 };
