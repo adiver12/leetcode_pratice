@@ -15,14 +15,16 @@ public:
     
     void findSum(TreeNode* root,int curr,int maxdepth){
         
-        if(root!=NULL){
+        if(root==NULL){
+             return;
+        }
         if(curr==maxdepth){
             sum+=root->val;
         }
         findSum(root->left,curr+1,maxdepth);
         findSum(root->right,curr+1,maxdepth);
     }
-    }
+    
     
     int maxDepth(TreeNode* root){
         if(root==NULL){
