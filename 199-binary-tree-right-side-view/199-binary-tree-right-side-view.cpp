@@ -29,7 +29,7 @@ public:
     vector<int> rightSideView(TreeNode* root) 
     {
         vector<int> res;
-        res = solve( root , res , 0 );
+        solve( root , res , 0 );
         return res;
     }
 };
