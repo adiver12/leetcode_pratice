@@ -11,9 +11,9 @@
  */
 class Solution {
 public:
-   vector<int> solve(TreeNode* root, vector<int>& res, int lvl){
+     void solve(TreeNode* root, vector<int>& res, int lvl){
         if (root==NULL){
-            return res;
+            return  ;
         }
        
         if (res.size()==lvl)
@@ -23,13 +23,13 @@ public:
        
         solve(root->right , res , lvl + 1);     // right
         solve(root->left , res , lvl + 1);       // left
-        return res;
+         
     }
     
     vector<int> rightSideView(TreeNode* root) 
     {
         vector<int> res;
-        solve( root , res , 0 );
+        solve(root , res , 0);
         return res;
     }
 };
