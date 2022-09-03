@@ -26,7 +26,7 @@ public:
             return false;
         }
         
-        if (p->val != q->val) {
+       else if (p->val != q->val) {
             return false;
         }
         
