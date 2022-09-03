@@ -18,7 +18,7 @@ public:
  
         sum=sum-root->val;    
     
-        if(sum==0 && !root->left && !root->right)
+        if(sum==0 && root->left == NULL && root->right == NULL)
             return true;    
                                                            
         return hasPathSum(root->left,sum)||hasPathSum(root->right,sum);//Propagation
