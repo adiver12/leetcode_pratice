@@ -12,7 +12,8 @@
 class Solution {
 public:
     int widthOfBinaryTree(TreeNode* root) {
-  if(root == NULL)
+      
+        if(root == NULL)
             return 0;
         
         int res = 1;
