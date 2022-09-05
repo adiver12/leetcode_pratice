@@ -11,18 +11,21 @@
  */
 class Solution {
 public:
+    
+    int traverse(TreeNode* root,int& moves){
+        if(root==NULL){
+            return 0;
+        }
+        int left=traverse( root->left , moves);
+        int right=traverse( root->right , moves);
+        moves+=abs(left)+abs(right);
+        
+        return root->val+left+right-1;
+    }
+    
     int distributeCoins(TreeNode* root) {
-         int res = 0;
-        if (root->left) {
-            res += distributeCoins(root->left);
-            root->val += root->left->val - 1;
-            res += abs(root->left->val - 1);
-        }
-        if (root->right) {
-            res += distributeCoins(root->right);
-            root->val += root->right->val - 1;
-            res += abs(root->right->val - 1);
-        }
-        return res;       
+       int moves=0;
+       traverse(root,moves);
+       return moves;
     }
 };
