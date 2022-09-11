@@ -27,7 +27,8 @@ public:
     }
     
      int sumOfLeftLeaves(TreeNode* root){
-       
+         
+        
          bool flag=false;
          traverse(root,flag);
          return sum;
