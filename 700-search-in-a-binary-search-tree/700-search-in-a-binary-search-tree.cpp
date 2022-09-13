@@ -29,6 +29,6 @@ public:
              temp=temp->right;
         }
      }
-        return temp;
+        return NULL;
     }
 };
