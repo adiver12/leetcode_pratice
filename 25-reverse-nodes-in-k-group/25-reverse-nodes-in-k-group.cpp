@@ -11,13 +11,11 @@
 class Solution {
 public:
     
-  
-     
-    
-    ListNode* reverseKGroup(ListNode* head, int k) {
+  ListNode* reverseKGroup(ListNode* head, int k) {
    ListNode* cursor = head;
         for(int i = 0; i < k; i++){
-            if(cursor == nullptr) return head;
+            if(cursor == NULL) 
+                return head;
             cursor = cursor->next;
         }
         ListNode* curr = head;
