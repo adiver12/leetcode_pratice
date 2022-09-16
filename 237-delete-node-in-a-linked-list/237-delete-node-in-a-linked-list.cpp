@@ -19,8 +19,7 @@ output: 1->2->3->5->6
 2. in 2nd step: node points to node's next next i.e 5->6
 1->2->3->5->6 
     */
-        
-   node->val=node->next->val;
-   node->next=node->next->next;
+    node->val=node->next->val;
+    node->next=node->next->next;   
     }
 };
