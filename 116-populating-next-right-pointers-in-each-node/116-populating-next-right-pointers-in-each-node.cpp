@@ -22,7 +22,7 @@ public:
    if(!root) return nullptr;
         queue<Node*> q;
         q.push(root);        
-        while(size(q)) {
+        while(!q.empty()) {
             Node* rightNode = nullptr;                    // set rightNode to null initially
             for(int i = size(q); i; i--) {                // traversing each level
                 auto cur = q.front(); q.pop();            // pop a node from current level and,
