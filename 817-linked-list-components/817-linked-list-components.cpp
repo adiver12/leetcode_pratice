@@ -11,29 +11,29 @@
 class Solution {
 public:
     int numComponents(ListNode* head, vector<int>& nums) {
-   unordered_map<int, int> m;
-        for (auto i : nums)
-            m[i]++;
-
-        int count = 0;
-        int res = 0;
-
-        while (head != NULL)
-        {
-            if (m.find(head->val) != m.end())
-            {
+  
+     unordered_map<int,int>m;
+    for(int i=0;i<nums.size();i++){
+        m[nums[i]]++;
+    }
+        int count=0;
+        int res=0;
+        
+        while(head != NULL){
+            if(m.find(head->val) != m.end()){
                 count++;
             }
-            else
-            {
-                if (count >= 1)
+            else{
+                if(count >= 1){
                     res++;
-                count = 0;
+                   count=0;
+                }
             }
-            head = head->next;
+            head=head->next;
         }
-        if (count >= 1)
-            res++;
-        return res;       
+         if(count>=1){
+             res++;
+         }
+        return res;
     }
 };
