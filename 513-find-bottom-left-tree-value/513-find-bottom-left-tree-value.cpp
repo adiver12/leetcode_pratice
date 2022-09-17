@@ -18,12 +18,13 @@ public:
         q.push(root);
         
         while(!q.empty()) {
-            root=q.front(); // get the value before pop coz pop will not return anyy val
+           root=q.front(); // get the value before pop coz pop will not return anyy val
             q.pop();
-            if (root->right != NULL) {
+            if (root->right) {
                 q.push(root->right);
             }
-            if(root->left != NULL) q.push(root->left);
+            if(root->left) 
+             q.push(root->left);
         }
         return root->val;
     }
