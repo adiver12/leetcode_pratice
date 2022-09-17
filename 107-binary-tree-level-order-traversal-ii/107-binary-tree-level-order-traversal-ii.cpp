@@ -27,7 +27,7 @@ public:
             for(int i=0;i<size;i++) {
                 TreeNode* front=q.front();
                 q.pop();
-                
+                level.push_back(front->val);
                
                 if(front->left){
                     q.push(front->left);
@@ -35,7 +35,7 @@ public:
                 if(front->right){
                     q.push(front->right);
                 }  
-                 level.push_back(front->val);
+              
             }
             ans.push_back(level);   
         }
