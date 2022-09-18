@@ -12,22 +12,34 @@
 class Solution {
 public:
     bool isCompleteTree(TreeNode* root) {
+/* Use BFS to do a level order traversal,
+add childrens to the bfs queue,
+until we met the first empty node.
+
+For a complete binary tree,
+there should not be any node after we met an empty one.
+
+Time O(N), Space O(N)*/   
         
         bool nullBeforeNode = false;
         queue<TreeNode*> q;
         q.push(root);
         
-        while(size(q))
+        while(!q.empty())
         {
-            auto node = q.front();
+            TreeNode* front = q.front();
             q.pop();
             
-            if(node == NULL) nullBeforeNode = true;
+            if(front == NULL) 
+                nullBeforeNode = true;
             else 
             {
-                if(nullBeforeNode == true) return false;
-                q.push(node->left);
-                q.push(node->right);
+                if(nullBeforeNode == true) 
+                    return false;
+//                 
+//                 here not checking the whether we root is null or not directly insert 
+                q.push(front->left);
+                q.push(front->right);
             }
         }
         
