@@ -1,10 +1,7 @@
 class Solution {
 public:
     int mySqrt(int x) {
-        
-        if(x==0){
-            return 0;
-        }
+ 
         int s=0,e=x;
       long long  int ans=-1;
         while(s<=e) {
