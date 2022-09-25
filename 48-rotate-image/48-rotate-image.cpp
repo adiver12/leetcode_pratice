@@ -1,7 +1,50 @@
 class Solution {
 public:
     void rotate(vector<vector<int>>& matrix) {
-  /*
+ 
+  // LINK : https://leetcode.com/problems/rotate-image/discuss/1449737/Rotation-90Code-180-270-360-explanation-Inplace      
+        
+        
+ 	// complement of matrix 
+        int n = matrix.size();
+        for(int i=0; i<n; ++i) {
+            for(int j=i; j<n; ++j) {
+                swap(matrix[i][j], matrix[j][i]);
+            }
+        }
+
+        for(int i=0; i<n; ++i) {
+		// 2 Pointer approach :  just like we do in 1D array we take left and right pointers
+		// and swap the values and then make those pointers intersect at some point.
+            int left = 0, right = n-1;
+            while(left < right) {
+                swap(matrix[i][left], matrix[i][right]);
+                ++left;
+                --right;
+            }
+        }
+    }       
+        
+        
+        
+        
+        
+        
+        
+        
+ 
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        /*
  * clockwise rotate
  * first reverse up to down, then swap the symmetry 
  * 1 2 3     7 8 9     7 4 1
@@ -9,12 +52,12 @@ public:
  * 7 8 9     1 2 3     9 6 3
 */
  
-    reverse(matrix.begin(), matrix.end());
-    for (int i = 0; i < matrix.size(); ++i) {
-        for (int j = i + 1; j < matrix[i].size(); ++j)
-            swap(matrix[i][j], matrix[j][i]);
-    }
-}
+//     reverse(matrix.begin(), matrix.end());
+//     for (int i = 0; i < matrix.size(); ++i) {
+//         for (int j = i + 1; j < matrix[i].size(); ++j)
+//             swap(matrix[i][j], matrix[j][i]);
+//     }
+// }
 
 /*
  * anticlockwise rotate
