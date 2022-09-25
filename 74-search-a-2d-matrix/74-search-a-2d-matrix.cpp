@@ -30,11 +30,11 @@ public:
         {
             int mid = start + (end - start) / 2;
 			// a[x] : matrix[x / m][x % m] formulae
-            int ind = matrix[mid/m][mid%m];
-            if (target == ind)
+              
+            if (target == matrix[mid/m][mid%m])
                 return true;
 			// left half
-            else if(target < ind)
+            else if(target < matrix[mid/m][mid%m])
                 end = mid - 1;
             else
 			// right half
