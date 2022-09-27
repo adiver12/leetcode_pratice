@@ -12,34 +12,27 @@
 class Solution {
 public:
     
-    
-    bool ishelper(TreeNode* p, TreeNode* q ) {
-         if(p == NULL && q == NULL){
-             return true;
-         }  
-        else if(p==NULL || q==NULL){
-             return false;
-         }  
-        
-        else if(p->val != q->val){
+    bool solve(TreeNode *root1, TreeNode *root2){
+        if(root1==NULL and root2==NULL){
+            return true;
+        }
+        if(root1==NULL || root2==NULL){
+            return false;
+        }
+        if(root1->val !=root2->val){
             return false;
         }
         
-        else{
-            return (ishelper(p->left, q->right) && ishelper(p->right, q->left));
-        }
+        return solve(root1->left, root2->right)&&
+               solve(root1->right, root2->left);
     }
-    
+
     
    bool isSymmetric(TreeNode *root) {
-       if(root==NULL){
-           return true;
-       }
-    
-      return   ishelper(root->left,root->right);
-   }
-    
-    
-    
- 
+     if(root==NULL){
+         return true;
+     }
+       
+       return solve(root->left,root->right);
+   } 
 };
