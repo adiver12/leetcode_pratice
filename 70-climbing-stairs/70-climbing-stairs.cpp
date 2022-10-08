@@ -4,8 +4,8 @@ public:
     
     int f(int n, unordered_map<int,int> &dp) {
    
-    if(n==0) return 1;
-    if(n==1) return 1;       
+    dp[0] =1;
+    dp[1] =1;       
         
      if(dp.find(n) != dp.end()) {
          return dp[n];
