@@ -3,4 +3,6 @@
 SELECT Person.firstName, Person.lastName, Address.city, Address.state 
 FROM Person
 LEFT JOIN Address
-ON Person.PersonId = Address.PersonId;
+ON Person.PersonId = Address.PersonId
+ORDER BY Person.firstName;
+
