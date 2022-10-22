@@ -4,7 +4,7 @@ public:
          
        int need_left = 0, need_right = 0;
         
-        for (char c : S) {
+        for (auto c : S) {
             if (c == '(')
                 need_right++;
             else if (need_right > 0)
