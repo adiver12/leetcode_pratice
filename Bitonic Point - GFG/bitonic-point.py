@@ -15,7 +15,7 @@ class Solution:
 		        e = mid
 		    else:
 		        s = mid + 1
-		return arr[s] 
+		return arr[e] 
 
 
 #{ 
