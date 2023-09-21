@@ -3,7 +3,18 @@
 class Solution:
     def findMin(self, arr, n):
         #complete the function here
-        return min(arr)
+        low, high = 0, n-1
+        if(arr[low] < arr[high]):
+            return arr[low]
+        while(low <= high):
+            mid = (low+high)//2
+            if(arr[mid-1] > arr[mid]):
+                return arr[mid]
+            if(arr[mid] > arr[high]):
+                low = mid + 1
+            else:
+                high = mid - 1
+        return -1
 
 
 #{ 
