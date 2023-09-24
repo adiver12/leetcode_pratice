@@ -3,14 +3,18 @@
 class Solution:
     def Maximize(self, a, n): 
         
-        a.sort()
         
+        a.sort()
         sum = 0
+        
         for i in range(n):
             sum += i*a[i]
         
         return sum % (10**9 + 7)
-         
+            
+        
+
+ 
         
       
 
