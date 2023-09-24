@@ -5,10 +5,10 @@ class Solution:
 # Create a min-heap using heapq in Python
         # q = []
 
-        # for i in range(r + 1):
-   
- 
+        
+        
         q = []
+        
         for i in range(r+1):
             heapq.heappush(q,arr[i])
         
@@ -19,7 +19,7 @@ class Solution:
             k -= 1
         
         return top
-        
+ 
         
  
 
