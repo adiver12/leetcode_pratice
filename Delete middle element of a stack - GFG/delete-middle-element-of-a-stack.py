@@ -6,11 +6,18 @@ class Solution:
     def deleteMid(self, s, sizeOfStack):
         # code here
         
-        if sizeOfStack%2!=0:
-            v=(sizeOfStack//2)
+        # if sizeOfStack%2!=0:
+        #     v=(sizeOfStack//2)
+        #     s.pop(v)
+        # if sizeOfStack%2==0:
+        #     v=(sizeOfStack//2)-1
+        #     s.pop(v)
+            
+        if sizeOfStack%2 != 0:
+            v=(sizeOfStack // 2)
             s.pop(v)
-        if sizeOfStack%2==0:
-            v=(sizeOfStack//2)-1
+        if sizeOfStack%2 == 0:
+            v = (sizeOfStack//2)-1
             s.pop(v)
 
 
