@@ -14,7 +14,6 @@ class Solution:
             heapq.heappush(q,i)
             if len(q) > k:
                 heapq.heappop(q)
-        
         q.sort(reverse = True)
         return q
 
