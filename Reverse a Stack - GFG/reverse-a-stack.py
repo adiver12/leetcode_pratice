@@ -5,8 +5,9 @@ from typing import List
 class Solution:
     def reverse(self,St): 
         #code here
-        i=0
-        j=len(St)-1
+  
+        i = 0
+        j = len(St)-1
         while i<j:
             temp=St[i]
             St[i]=St[j]
