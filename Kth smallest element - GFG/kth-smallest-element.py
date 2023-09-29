@@ -3,15 +3,14 @@ import heapq
 class Solution:
     def kthSmallest(self,arr, l, r, k):
 # Create a min-heap using heapq in Python
-        # q = []
-        
+
         q = []
         
         for i in range(r+1):
             heapq.heappush(q,arr[i])
         
         top = None
-        
+    
         while k > 0:
             top = heapq.heappop(q)
             k -= 1
