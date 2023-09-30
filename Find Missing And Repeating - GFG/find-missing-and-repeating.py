@@ -16,8 +16,8 @@ class Solution:
                 break
         s=(n*(n+1))//2
         ss=sum(arr)
-        ss-=m
-        return m,s-ss
+        
+        return m,s-(ss-m)
 
 
 #{ 
