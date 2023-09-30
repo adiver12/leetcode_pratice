@@ -4,6 +4,21 @@ class Solution:
     def findTwoElement( self,arr, n): 
         # code here
         
+        # d={}
+        # for i in arr:
+        #     if i in d:
+        #         d[i]+=1
+        #     else:
+        #         d[i]=1
+        # for i in d:
+        #     if d[i]==2:
+        #         m=i
+        #         break
+        # s=(n*(n+1))//2
+        # ss=sum(arr)
+        
+        # return m,s-(ss-m)
+        
         d={}
         for i in arr:
             if i in d:
@@ -11,14 +26,13 @@ class Solution:
             else:
                 d[i]=1
         for i in d:
-            if d[i]==2:
+            if d[i] == 2:
                 m=i
                 break
-        s=(n*(n+1))//2
+        s=n*(n+1)//2
         ss=sum(arr)
         
-        return m,s-(ss-m)
-
+        return m, s-(ss-m)
 
 #{ 
  # Driver Code Starts
