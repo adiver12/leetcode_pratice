@@ -4,17 +4,23 @@ class Solution:
 
     def findMinDiff(self, a,n,m):
         
-                
-
         a.sort()
-        mi=max(a)
+        
         i=0
-        e=m-1
-        while e<n:
-            mi=min(mi,a[e]-a[i])
+        j=i+m-1
+        ans=float('inf')
+        
+        while(j<n):
+            ans=min(ans,a[j]-a[i])
             i+=1
-            e+=1
-        return mi
+            j+=1
+        
+        return ans
+            
+            
+        
+                
+ 
 
         # code here
 
