@@ -5,15 +5,23 @@ from typing import List
 class Solution:
     def reverse(self,St): 
         #code here
-  
-        i = 0
-        j = len(St)-1
-        while i<j:
+        
+        i=0
+        j=len(St)-1
+        temp = 0
+        
+        while i<=j:
             temp=St[i]
             St[i]=St[j]
             St[j]=temp
             i+=1
             j-=1
+        
+        return St
+            
+  
+
+   
 
 
 #{ 
