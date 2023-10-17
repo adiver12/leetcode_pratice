@@ -9,6 +9,9 @@ class Solution:
             if i == 0 or S[i] != S[i-1]:
                 result += S[i]
         return result
+        
+
+        
 
 
 #{ 
