@@ -6,21 +6,27 @@ class Solution:
     #Function to find all elements in array that appear more than n/k times.
     def countOccurence(self,arr,n,k):
         #Your code here
+        
         c = n/k
+        
         f={}
         
         for i in arr:
             if i not in f:
-                f[i]=1
+                f[i] = 1
             elif i in f:
-                f[i]+=1
-        ans=[]
+                f[i] += 1
+        
+        l=[]
         
         for i in f:
-            if f[i] > n/k:
-                ans.append(i)
+            if (f[i] > c):
+                l.append(i)
         
-        return len(ans)
+        return len(l)
+    
+
+        
                 
 
 
