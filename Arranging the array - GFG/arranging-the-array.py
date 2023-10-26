@@ -16,6 +16,7 @@ class Solution:
         for i in range(len(pri)):
             arr[i]=pri[i]
             
+        return arr
   
             
         
