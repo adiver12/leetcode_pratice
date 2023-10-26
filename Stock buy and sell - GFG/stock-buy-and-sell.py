@@ -3,7 +3,7 @@
 class Solution:
     #Function to find the days of buying and selling stock for max profit.
 	def stockBuySell(self, A, n):
-		#code here
+# 		#code here
 
         temp=[]
         
@@ -11,6 +11,7 @@ class Solution:
             if A[i] > A[i-1]:
                 temp.append([i-1,i])
         return temp
+        
 
 
         
