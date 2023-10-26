@@ -3,9 +3,9 @@ class Solution:
 
 	def rowWithMax1s(self,arr, n, m):
 		# code here
-		sum = 0
-		max_sum = 0
-		r = -1
+	
+		max_sum=0
+		r=-1
 		for i in range(n):
 		    sum = 0
 		    for j in range(m):
@@ -14,7 +14,7 @@ class Solution:
 		        max_sum = sum
 		        r = i
 
-		return r    
+		return r  
 
 
 #{ 
